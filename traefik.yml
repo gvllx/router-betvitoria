@@ -1,0 +1,22 @@
+api:
+  dashboard: true
+
+log:
+  level: DEBUG
+
+providers:
+  docker:
+    exposedByDefault: false
+
+entryPoints:
+  web:
+    address: ":80"
+  websecure:
+    address: ":443"
+
+certificatesResolvers:
+  myresolver:
+    acme:
+      email: leadhunter563@gmail.com
+      storage: acme.json
+      tlsChallenge: {}
